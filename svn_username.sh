@@ -1,0 +1,1 @@
+svn log -q $1 | grep -e '^r' | awk 'BEGIN { FS = "|" } ; { print $2 }' | sort | uniq 1>>$2 2>>$3
